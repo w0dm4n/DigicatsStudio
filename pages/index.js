@@ -3,6 +3,20 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { BsDiscord, BsGithub, BsTwitter, BsYoutube } from "react-icons/bs";
 import { FaTelegramPlane } from "react-icons/fa";
+import localFont from "next/font/local";
+
+const Pramukh = localFont({
+  src: [
+    { path: "./PramukhRounded-Regular.woff2", weight: "400", style: "normal" },
+  ],
+});
+
+const Satoshi = localFont({
+  src: [
+    { path: "./Satoshi-Bold.woff2", weight: "700", style: "normal" },
+    { path: "./Satoshi-Medium.woff2", weight: "500", style: "normal" },
+  ],
+});
 
 export default function Home() {
   const socials = [
@@ -70,11 +84,13 @@ export default function Home() {
         />
       </Head>
 
-      <div className="container" onWheel={onWheel}>
+      <div className={Pramukh.className + " container"} onWheel={onWheel}>
+        <Image src={"/bg.png"} width={1287} height={374} className="bg" />
+        <Image src={"/cat.png"} width={854} height={710} className="cat" />
         <div className="main">
           <div className="header">
             <div className="logo">
-              <Image src={"/kryxivia.jpg"} width={150} height={150} />
+              <Image src={"/logo.png"} width={150} height={150} />
             </div>
             <div className="socials">
               {socials.map((social, i) => (
@@ -86,8 +102,8 @@ export default function Home() {
           </div>
           <div className="sections">
             <div className="section" data-index="0" data-active>
-              <div className="subtitle gradient">
-                Welcome to Digicats Studio
+              <div className={Satoshi.className + " subtitle gradient"}>
+                Welcome to <span>Digicats Studio</span>
               </div>
               <div className="title">
                 Discover our Web3 Studio
@@ -96,29 +112,31 @@ export default function Home() {
                   specialized in <span className="gradient">NFT creation</span>
                 </span>
               </div>
-              <div className="desc">
+              <div className={Satoshi.className + " desc"}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Praesent leo erat, tristique vitae elementum a, iaculis auctor
                 eros. Proin suscipit mollis enim, ac mollis ligula pulvinar sed.
-                Sed tincidunt bibendum augue et blandit. Proin lobortis congue
-                elit, quis mollis augue semper a. Ut elementum posuere orci vel
-                sollicitudin.
+                Sed tincidunt bibendum augue et blandit.
               </div>
             </div>
 
             <div className="section" data-index="1">
-              <div className="subtitle gradient">Our last collection</div>
+              <div className={Satoshi.className + " subtitle gradient"}>
+                Our last collection
+              </div>
 
               <div className="title-wrap">
-                <Image src={"/mac.png"} width={80} height={80} />
-                <div className="title">
-                  <span className="title-line">Monster Ape Club</span>
+                <Image src={"/mac.png"} width={100} height={100} />
+                <div className={Satoshi.className + " title small"}>
+                  <span className={Pramukh.className + " title-line small"}>
+                    Monster Ape Club
+                  </span>
                   <br />
                   <span className="gradient">7,999</span> unique 3D Monster Apes
                 </div>
               </div>
 
-              <div className="desc">
+              <div className={Satoshi.className + " desc"}>
                 Monster Ape Club is a collection of 7,999 unique generated 3D
                 Monster Apes, stored on the Ethereum Blockchain.
                 <br />
@@ -134,17 +152,21 @@ export default function Home() {
             </div>
 
             <div className="section" data-index="2">
-              <div className="subtitle gradient">Our last collection</div>
+              <div className={Satoshi.className + " subtitle gradient"}>
+                Our team
+              </div>
 
               <div className="title-wrap">
-                <Image src={"/kryxivia.jpg"} width={80} height={80} />
-                <div className="title">
-                  <span className="title-line">Frederick</span>
+                <Image src={"/kryxivia.jpg"} width={100} height={100} />
+                <div className={Satoshi.className + " title small"}>
+                  <span className={Pramukh.className + " title-line small"}>
+                    Frederick
+                  </span>
                   <br />
                   <span className="gradient">NFT MMORPG Kryxivia</span> founder
                 </div>
               </div>
-              <div className="desc">
+              <div className={Satoshi.className + " desc"}>
                 <a
                   href="https://kryxivia.io/"
                   target={"_blank"}
@@ -154,14 +176,16 @@ export default function Home() {
                 </a>
               </div>
               <div className="title-wrap">
-                <Image src={"/nhance.png"} width={80} height={80} />
-                <div className="title">
-                  <span className="title-line">Aleksei</span>
+                <Image src={"/nhance.png"} width={100} height={100} />
+                <div className={Satoshi.className + " title small"}>
+                  <span className={Pramukh.className + " title-line small"}>
+                    Aleksei
+                  </span>
                   <br />
                   <span className="gradient">N-Hance Studio</span> founder
                 </div>
               </div>
-              <div className="desc">
+              <div className={Satoshi.className + " desc"}>
                 <a
                   href="https://www.nhance.studio/"
                   target={"_blank"}
@@ -173,7 +197,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="scroll">
+          <div className={Satoshi.className + " scroll"}>
             <div className="scroll-deco"></div>
             <span className="gradient">Scroll to explore</span>
             <div className="scroll-sep"></div>

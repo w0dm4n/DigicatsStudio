@@ -28,6 +28,28 @@ body {
   }
 }
 
+.cat {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+
+  max-width: 50vw;
+  height: auto;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+.bg {
+  position: fixed;
+  top: 0;
+  max-width: 80vw;
+  height: auto;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 img {
   border-radius: 8px;
 }
@@ -53,18 +75,12 @@ img {
   @media screen and (max-width: 768px) {
     flex-direction: column;
     gap: 40px;
+    padding: 40px;
   }
 }
 
 .logo {
   font-size: 0;
-  
-  img {
-    @media screen and (max-width: 768px) {
-      width: 100px;
-      height: auto;
-    }
-  }
 }
 
 .socials {
@@ -139,16 +155,35 @@ img {
 }
 
 .subtitle {
-  font-size: 24px;
+  font-size: 17px;
   font-weight: 500;
 
+  span {
+    font-weight: 700;
+  }
+
   & + * {
-    margin-top: 40px;
+    margin-top: 30px;
   }
 }
 
 .title {
-  font-size: 32px;
+  font-size: 90px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 50px;
+  }
+
+  &.small {
+    font-size: 20px;
+    line-height: 1.4;
+
+    @media screen and (max-width: 768px) {
+      span {
+        display: block;
+      }
+    }
+  }
 
   &-wrap {
     display: flex;
@@ -165,14 +200,28 @@ img {
   }
 
   &-line {
-    font-size: 40px;
+    font-size: 130px;
+    line-height: 0.7;
+
+    @media screen and (max-width: 768px) {
+      font-size: 60px;
+      line-height: 1;
+
+      span {
+        display: block;
+      }
+    }
+
+    &.small {
+      font-size: 64px;
+    }
   }
 }
 
 .desc {
   font-size: 16px;
-  line-height: 1.8;
-  margin-top: 40px;
+  line-height: 2;
+  margin-top: 30px;
   max-width: 400px;
 }
 
@@ -235,7 +284,7 @@ img {
   }
 
   .bold {
-    font-size: 24px;
+    font-size: 20px;
   }
 }
 
