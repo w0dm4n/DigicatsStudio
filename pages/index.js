@@ -67,7 +67,7 @@ export default function Home() {
           property="og:description"
           content="Discover unique and innovative NFT collections crafted by our talented artists and designers. Explore the intersection of art and technology with Digicats Studio."
         />
-        <meta property="og:image" content="/digicats_banner.png" />
+        <meta property="og:image" content="https://digicats.io/digicats_banner.jpg" />
         <meta property="og:image:type" content="image/jpeg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
