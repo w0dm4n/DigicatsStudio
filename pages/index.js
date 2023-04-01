@@ -113,10 +113,7 @@ export default function Home() {
                 </span>
               </div>
               <div className={Satoshi.className + " desc"}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Praesent leo erat, tristique vitae elementum a, iaculis auctor
-                eros. Proin suscipit mollis enim, ac mollis ligula pulvinar sed.
-                Sed tincidunt bibendum augue et blandit.
+              Digicats Studio is a cutting-edge digital art studio that creates unique and innovative NFT collections. Our team of talented artists and designers use the latest technology and techniques to craft stunning works of digital art that are sure to captivate and inspire. Whether you're an avid NFT collector or simply appreciate the beauty of digital art, Digicats Studio has something for everyone. Join us on our journey to push the boundaries of creativity and explore the limitless possibilities of the digital art world.
               </div>
             </div>
 
