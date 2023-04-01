@@ -23,7 +23,7 @@ export default function Home() {
     {
       link: "https://twitter.com/digicats_studio",
       icon: <BsTwitter />,
-    }
+    },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -59,22 +59,34 @@ export default function Home() {
         <title>Digicats Studio</title>
         <meta name="description" content="Digicats Studio" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+          property="og:title"
+          content="Digicats Studio - A Leading NFT Creation Studio"
+        />
+        <meta
+          property="og:description"
+          content="Discover unique and innovative NFT collections crafted by our talented artists and designers. Explore the intersection of art and technology with Digicats Studio."
+        />
+        <meta property="og:image" content="https://example.com/thumbnail.jpg" />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:url" content="https://digicats.io" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Digicats Studio" />
+        <meta property="og:locale" content="en_US" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
-          rel="stylesheet"
-        />
       </Head>
 
       <div className={Pramukh.className + " container"} onWheel={onWheel}>
-        <Image src={"/bg.png"} width={1287} height={374} className="bg" />
-        <Image src={"/cat.png"} width={854} height={710} className="cat" />
+        <Image src={"/bg.png"} width={1287} height={374} className="bg" alt="" />
+        <Image src={"/cat.png"} width={854} height={710} className="cat" alt="" />
         <div className="main">
           <div className="header">
             <div className="logo">
-              <Image src={"/logo.png"} width={150} height={150} />
+              <Image src={"/logo.png"} width={150} height={150} alt="" />
             </div>
             <div className="socials">
               {socials.map((social, i) => (
@@ -90,14 +102,24 @@ export default function Home() {
                 Welcome to <span>Digicats Studio</span>
               </div>
               <div className="title">
-              Where Innovation Meets Art:
+                Where Innovation Meets Art:
                 <br />
                 <span className="title-line">
-                Our Web3 <span className="gradient">NFT Studio</span>
+                  Our Web3 <span className="gradient">NFT Studio</span>
                 </span>
               </div>
               <div className={Satoshi.className + " desc"}>
-              Digicats Studio is a cutting-edge digital art studio that creates unique and innovative NFT collections. Our team of talented artists and designers use the latest technology and techniques to craft stunning works of digital art that are sure to captivate and inspire. Whether you're an avid NFT collector or simply appreciate the beauty of digital art, Digicats Studio has something for everyone.<br/><br/> Join us on our journey to push the boundaries of creativity and explore the limitless possibilities of the digital art world!
+                {`Digicats Studio is a cutting-edge digital art studio that
+                creates unique and innovative NFT collections. Our team of
+                talented artists and designers use the latest technology and
+                techniques to craft stunning works of digital art that are sure
+                to captivate and inspire. Whether you're an avid NFT collector
+                or simply appreciate the beauty of digital art, Digicats Studio
+                has something for everyone.`}
+                <br />
+                <br /> Join us on our journey to push the boundaries of
+                creativity and explore the limitless possibilities of the
+                digital art world!
               </div>
             </div>
 
@@ -107,7 +129,7 @@ export default function Home() {
               </div>
 
               <div className="title-wrap">
-                <Image src={"/mac.png"} width={100} height={100} />
+                <Image src={"/mac.png"} width={100} height={100} alt="" />
                 <div className={Satoshi.className + " title small"}>
                   <span className={Pramukh.className + " title-line small"}>
                     Monster Ape Club
@@ -120,8 +142,17 @@ export default function Home() {
               <div className={Satoshi.className + " desc"}>
                 Monster Ape Club is a collection of 7,999 unique generated 3D
                 Monster Apes, stored on the Ethereum Blockchain.
-                <br/><br/>
-                <i>We successfully sold-out the MAC collection for 5M$ worth of ETH, mint price was 0.25 ETH and floor price went <span style={{color: "#23ff23"}}>x5</span> at ~1.3 ETH, total volume generated from the collection is approximatively <span style={{color: "#c99d66"}}><b>~7,000 ETH.</b></span></i>
+                <br />
+                <br />
+                <i>
+                  We successfully sold-out the MAC collection for 5M$ worth of
+                  ETH, mint price was 0.25 ETH and floor price went{" "}
+                  <span style={{ color: "#23ff23" }}>x5</span> at ~1.3 ETH,
+                  total volume generated from the collection is approximatively{" "}
+                  <span style={{ color: "#c99d66" }}>
+                    <b>~7,000 ETH.</b>
+                  </span>
+                </i>
                 <br />
                 <br />
                 <a
@@ -140,7 +171,7 @@ export default function Home() {
               </div>
 
               <div className="title-wrap">
-                <Image src={"/kryxivia.jpg"} width={100} height={100} />
+                <Image src={"/kryxivia.jpg"} width={100} height={100} alt="" />
                 <div className={Satoshi.className + " title small"}>
                   <span className={Pramukh.className + " title-line small"}>
                     Frederick
@@ -159,7 +190,7 @@ export default function Home() {
                 </a>
               </div>
               <div className="title-wrap">
-                <Image src={"/nhance.png"} width={100} height={100} />
+                <Image src={"/nhance.png"} width={100} height={100} alt="" />
                 <div className={Satoshi.className + " title small"}>
                   <span className={Pramukh.className + " title-line small"}>
                     Aleksei

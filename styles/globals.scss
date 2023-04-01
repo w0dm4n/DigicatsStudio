@@ -31,7 +31,7 @@ body {
 .cat {
   position: fixed;
   bottom: 0;
-  right: 0;
+  right: -100px;
 
   max-width: 50vw;
   height: auto;
@@ -70,7 +70,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 60px 80px;
+  padding: 5vh 80px;
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
@@ -109,7 +109,7 @@ img {
 
 .sections {
   position: relative;
-  padding: 30px 80px;
+  padding: 3vh 80px;
 
   @media screen and (max-width: 768px) {
     display: flex;
@@ -122,6 +122,8 @@ img {
 
 .section {
   position: absolute;
+  left: 80px;
+  right: 80px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -133,6 +135,8 @@ img {
 
     @media screen and (max-width: 768px) {
       position: relative;
+      left: 0;
+      right: 0;
       align-items: center;
       opacity: 1;
       visibility: visible;
@@ -168,7 +172,12 @@ img {
 }
 
 .title {
-  font-size: 90px;
+  font-size: 60px;
+
+  @media screen and (max-height: 840px) {
+    font-size: 40px;
+    margin-top: 20px;
+  }
 
   @media screen and (max-width: 768px) {
     font-size: 50px;
@@ -200,8 +209,14 @@ img {
   }
 
   &-line {
-    font-size: 130px;
+    font-size: 100px;
     line-height: 0.7;
+    letter-spacing: 2px;
+
+    @media screen and (max-height: 840px) {
+      font-size: 70px;
+      line-height: 1;
+    }
 
     @media screen and (max-width: 768px) {
       font-size: 60px;
@@ -223,6 +238,11 @@ img {
   line-height: 2;
   margin-top: 30px;
   max-width: 800px;
+
+  @media screen and (max-height: 840px) {
+    font-size: 14px;
+    margin-top: 20px;
+  }
 }
 
 .btn {
@@ -308,4 +328,16 @@ img {
       top: 20px;
       opacity: 0
   }
+}
+
+* {
+  scrollbar-color: #511ea5 #d53a9e;
+  scrollbar-width: thin;
+}
+*::-webkit-scrollbar {
+  width: 3px;
+  background-color: #511ea5;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: #d53a9e;
 }
