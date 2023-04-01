@@ -75,14 +75,44 @@ export default function Home() {
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Digicats Studio" />
         <meta property="og:locale" content="en_US" />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ffa466" />
+        <meta name="msapplication-TileColor" content="#ffffff" />
+        <meta name="theme-color" content="#ffffff" />
       </Head>
 
       <div className={Pramukh.className + " container"} onWheel={onWheel}>
-        <Image src={"/bg.png"} width={1287} height={374} className="bg" alt="" />
-        <Image src={"/cat.png"} width={854} height={710} className="cat" alt="" />
+        <Image
+          src={"/bg.png"}
+          width={1287}
+          height={374}
+          className="bg"
+          alt=""
+        />
+        <Image
+          src={"/cat.png"}
+          width={854}
+          height={710}
+          className="cat"
+          alt=""
+        />
         <div className="main">
           <div className="header">
             <div className="logo">
