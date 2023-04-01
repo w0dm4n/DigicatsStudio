@@ -21,25 +21,9 @@ const Satoshi = localFont({
 export default function Home() {
   const socials = [
     {
-      link: "#",
-      icon: <BsGithub />,
-    },
-    {
-      link: "#",
+      link: "https://twitter.com/digicats_studio",
       icon: <BsTwitter />,
-    },
-    {
-      link: "#",
-      icon: <BsDiscord />,
-    },
-    {
-      link: "#",
-      icon: <FaTelegramPlane />,
-    },
-    {
-      link: "#",
-      icon: <BsYoutube />,
-    },
+    }
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -106,20 +90,20 @@ export default function Home() {
                 Welcome to <span>Digicats Studio</span>
               </div>
               <div className="title">
-                Discover our Web3 Studio
+              Where Innovation Meets Art:
                 <br />
                 <span className="title-line">
-                  specialized in <span className="gradient">NFT creation</span>
+                Our Web3 <span className="gradient">NFT Studio</span>
                 </span>
               </div>
               <div className={Satoshi.className + " desc"}>
-              Digicats Studio is a cutting-edge digital art studio that creates unique and innovative NFT collections. Our team of talented artists and designers use the latest technology and techniques to craft stunning works of digital art that are sure to captivate and inspire. Whether you're an avid NFT collector or simply appreciate the beauty of digital art, Digicats Studio has something for everyone. Join us on our journey to push the boundaries of creativity and explore the limitless possibilities of the digital art world.
+              Digicats Studio is a cutting-edge digital art studio that creates unique and innovative NFT collections. Our team of talented artists and designers use the latest technology and techniques to craft stunning works of digital art that are sure to captivate and inspire. Whether you're an avid NFT collector or simply appreciate the beauty of digital art, Digicats Studio has something for everyone.<br/><br/> Join us on our journey to push the boundaries of creativity and explore the limitless possibilities of the digital art world!
               </div>
             </div>
 
             <div className="section" data-index="1">
               <div className={Satoshi.className + " subtitle gradient"}>
-                Our last collection
+                Our last collections
               </div>
 
               <div className="title-wrap">
@@ -136,6 +120,8 @@ export default function Home() {
               <div className={Satoshi.className + " desc"}>
                 Monster Ape Club is a collection of 7,999 unique generated 3D
                 Monster Apes, stored on the Ethereum Blockchain.
+                <br/><br/>
+                <i>We successfully sold-out the MAC collection for 5M$ worth of ETH, mint price was 0.25 ETH and floor price went <span style={{color: "#23ff23"}}>x5</span> at ~1.3 ETH, total volume generated from the collection is approximatively <span style={{color: "#c99d66"}}><b>~7,000 ETH.</b></span></i>
                 <br />
                 <br />
                 <a
@@ -143,7 +129,7 @@ export default function Home() {
                   target={"_blank"}
                   className="btn"
                 >
-                  View more
+                  View collection
                 </a>
               </div>
             </div>
